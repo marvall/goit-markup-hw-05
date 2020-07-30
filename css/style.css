@@ -605,12 +605,10 @@ img {
 .product-content-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.product-content-item:hover,
-.product-content-item:focus {
+.product-content-item:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
-.product-content-item:hover .product-description,
-.product-content-item:focus .product-description {
+.product-content-item:hover .product-description {
   transform: translateY(0);
 }
