@@ -120,6 +120,10 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-menu-item:not(:last-child) {
   margin-right: 50px;
@@ -139,6 +143,10 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-menu li:not(:last-child) {
   margin-right: 50px;
@@ -153,6 +161,10 @@ img {
 .contact-menu .link svg {
   margin-right: 10px;
   vertical-align: middle;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-menu .link:hover svg,
 .contact-menu .link:focus svg {
@@ -189,7 +201,6 @@ img {
   background-size: cover;
   padding-bottom: 200px;
   padding-top: 200px;
-  /* Добавлен временно пока нет фоновой картинки в секции*/
   background-color: var(--bg-button);
 }
 .hero.title {
@@ -215,6 +226,10 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87em;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero.button:hover,
 .hero.button:focus {
@@ -251,10 +266,11 @@ img {
 }
 
 .our-principles .description {
+  margin: 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.17em;
-  margin: 0;
 }
 
 .our-principles svg {
@@ -274,7 +290,18 @@ img {
   width: 370px;
 }
 /* стили для заголовка описаны в section-title в шапке файле*/
+.what-we-do-img-container {
+  position: relative;
+}
 .what-we-do .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
   background-color: var(--bg-what-we-do-tittle);
   color: var(--secendary-text-color);
   font-weight: 700;
@@ -339,6 +366,10 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-page-icon:hover,
 .social-page-icon:focus {
@@ -348,6 +379,10 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--svg-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-page-icon:hover .social-link-svg,
 .social-page-icon:focus .social-link-svg {
@@ -370,9 +405,17 @@ img {
   border-width: 1px;
   border-radius: 4px;
   border-color: var(--svg-color);
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-list svg {
   fill: var(--svg-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-list-link:hover,
 .company-list-link:focus {
@@ -460,6 +503,10 @@ img {
   line-height: 1.33em;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-menu-button.state-active,
 .filter-menu-button:hover,
@@ -487,15 +534,50 @@ img {
   font-size: 16px;
   line-height: 1.87em;
 }
+.product-img-container {
+  position: relative;
+  overflow: hidden;
+}
+/* .product-img-container::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-action-color);
+
+   !!! Была мысль сделать синий фон как ::befor, и сверху повесить параграф.
+  Но мне показалось, что это просто лишний элемент.
+} */
 .product-description {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: 63px;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-left: 24px;
   margin: 0;
+
   background-color: var(--bg-action-color);
   color: var(--secendary-text-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55em;
   letter-spacing: 0.03em;
-  visibility: hidden;
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transform: translateY(100%);
 }
 .product-content {
   display: flex;
@@ -504,12 +586,18 @@ img {
 .product-description-container {
   padding-right: 24px;
   padding-left: 24px;
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   border-top: none;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .product-content-item {
   width: 370px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .product-content-item:not(:nth-child(3n)) {
   margin-right: 30px;
@@ -521,4 +609,8 @@ img {
 .product-content-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.product-content-item:hover .product-description,
+.product-content-item:focus .product-description {
+  transform: translateY(0);
 }
